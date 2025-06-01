@@ -48,26 +48,26 @@ const HowItWorks = () => {
   const stepsData = [
     {
       number: "01",
-      title: "Request Access",
-      description: "Fill out the application form to join our early access program and secure your spot in line.",
+      title: "Download & Sign Up",
+      description: "Get the Elykid app or visit our website. Sign up with your email and verify your account.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "02",
-      title: "Personalization",
-      description: "We'll work with you to customize Atlas to your specific needs and preferences.",
+      title: "Set Up Your Profile",
+      description: "Personalize your experience by setting up your profile and choosing your preferred AI personality.",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "03",
-      title: "Integration",
-      description: "Atlas arrives at your location and is integrated into your living or working environment.",
+      title: "Start Chatting",
+      description: "Begin your conversation with Elykid. Your AI companion starts learning about you from day one.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "04",
-      title: "Adaptation",
-      description: "Through daily interaction, Atlas learns and adapts to your routines, preferences, and needs.",
+      title: "Explore & Customize",
+      description: "Dive into settings to customize tone, appearance, and features. Watch your AI evolve with each interaction.",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
     }
   ];
@@ -116,11 +116,11 @@ const HowItWorks = () => {
       <div className="section-container">
         <div className="text-center mb-16 opacity-0 fade-in-stagger">
           <div className="pulse-chip mx-auto mb-4">
-            <span>Process</span>
+            <span>Getting Started</span>
           </div>
-          <h2 className="section-title mb-4">How Atlas Integrates Into Your Life</h2>
+          <h2 className="section-title mb-4">How to Use Elykid – Getting Started</h2>
           <p className="section-subtitle mx-auto">
-            A seamless four-step process from request to full integration.
+            Excited to start your journey with your personalized AI companion? Let's get you set up in just a few simple steps.
           </p>
         </div>
         
@@ -162,6 +162,16 @@ const HowItWorks = () => {
               </div>
             ))}
           </div>
+        </div>
+        
+        <div className="text-center mt-12 opacity-0 fade-in-stagger">
+          <p className="text-lg text-gray-600 mb-6">
+            And that's it! You're ready to go. Start chatting with Elykid and watch it evolve as you interact. 
+            The more you chat, the smarter and more in tune with your needs it becomes.
+          </p>
+          <p className="text-base text-gray-500">
+            Take your time exploring all the features and enjoy a one-of-a-kind personalized experience.
+          </p>
         </div>
       </div>
     </section>
