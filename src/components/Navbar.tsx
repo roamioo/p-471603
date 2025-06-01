@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +37,11 @@ const Navbar = () => {
     }
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = '';
+  };
+
   return (
     <header
       className={cn(
@@ -45,36 +52,45 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a 
-          href="#" 
+        <Link 
+          to="/" 
           className="flex items-center space-x-2"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToTop();
-          }}
-          aria-label="Pulse Robot"
+          onClick={scrollToTop}
+          aria-label="Elykid"
         >
           <img 
             src="/logo.svg" 
-            alt="Pulse Robot Logo" 
+            alt="Elykid Logo" 
             className="h-7 sm:h-8" 
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a 
-            href="#" 
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-            }}
+          <Link 
+            to="/" 
+            className={cn("nav-link", location.pathname === "/" && "text-pulse-500")}
           >
             Home
-          </a>
-          <a href="#features" className="nav-link">About</a>
-          <a href="#details" className="nav-link">Contact</a>
+          </Link>
+          <Link 
+            to="/features" 
+            className={cn("nav-link", location.pathname === "/features" && "text-pulse-500")}
+          >
+            Features
+          </Link>
+          <Link 
+            to="/how-to-use" 
+            className={cn("nav-link", location.pathname === "/how-to-use" && "text-pulse-500")}
+          >
+            How to Use
+          </Link>
+          <Link 
+            to="/pricing" 
+            className={cn("nav-link", location.pathname === "/pricing" && "text-pulse-500")}
+          >
+            Pricing
+          </Link>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -93,38 +109,46 @@ const Navbar = () => {
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
       )}>
         <nav className="flex flex-col space-y-8 items-center mt-8">
-          <a 
-            href="#" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+          <Link 
+            to="/" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              location.pathname === "/" && "text-pulse-500 bg-pulse-50"
+            )}
+            onClick={closeMenu}
           >
             Home
-          </a>
-          <a 
-            href="#features" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+          </Link>
+          <Link 
+            to="/features" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              location.pathname === "/features" && "text-pulse-500 bg-pulse-50"
+            )}
+            onClick={closeMenu}
           >
-            About
-          </a>
-          <a 
-            href="#details" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+            Features
+          </Link>
+          <Link 
+            to="/how-to-use" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              location.pathname === "/how-to-use" && "text-pulse-500 bg-pulse-50"
+            )}
+            onClick={closeMenu}
           >
-            Contact
-          </a>
+            How to Use
+          </Link>
+          <Link 
+            to="/pricing" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              location.pathname === "/pricing" && "text-pulse-500 bg-pulse-50"
+            )}
+            onClick={closeMenu}
+          >
+            Pricing
+          </Link>
         </nav>
       </div>
     </header>
