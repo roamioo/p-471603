@@ -10,25 +10,25 @@ const ImageShowcaseSection = () => {
             Experience the Future Today
           </h2>
           <p className="text-base sm:text-lg text-gray-600">
-            Our cutting-edge humanoid robot is designed to transform how we interact 
-            with technology in everyday environments.
+            Elykid is your personal AI companion that understands you, learns from you, 
+            and grows with you. Built to think with you, not for you.
           </p>
         </div>
         
         <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant mx-auto max-w-4xl animate-on-scroll">
           <div className="w-full">
             <img 
-              src="/lovable-uploads/c3d5522b-6886-4b75-8ffc-d020016bb9c2.png" 
-              alt="Advanced humanoid robot with orange and white design" 
+              src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png" 
+              alt="Elykid AI Companion - Your personal intelligent assistant" 
               className="w-full h-auto object-cover"
             />
           </div>
           <div className="bg-white p-4 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 sm:mb-4">Next Generation Robotics</h3>
+            <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 sm:mb-4">Your Personal AI Companion</h3>
             <p className="text-gray-700 text-sm sm:text-base">
-              Built with precision engineering and sophisticated AI, our robots seamlessly 
-              integrate into various environments, from homes to hospitals, providing 
-              assistance and enriching human experiences.
+              Elykid is designed to be more than just an assistant - it's your thinking partner. 
+              Whether you need advice, want to brainstorm ideas, or just need someone to talk to, 
+              Elykid adapts to your personality and conversation style for truly personalized interactions.
             </p>
           </div>
         </div>

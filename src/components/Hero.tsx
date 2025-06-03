@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
@@ -90,8 +91,10 @@ const Hero = () => {
       className="overflow-hidden relative bg-cover" 
       id="hero" 
       style={{
-        backgroundImage: 'url("/Header-background.webp")',
-        backgroundPosition: 'center 30%', 
+        backgroundImage: `url("/lovable-uploads/cc0e45e8-11bc-495f-8acc-f78b7785004a.png"), url("/Header-background.webp")`,
+        backgroundSize: 'cover, cover',
+        backgroundPosition: 'center, center 30%',
+        backgroundBlendMode: 'overlay',
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
     >
