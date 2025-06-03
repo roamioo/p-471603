@@ -60,39 +60,69 @@ const FeaturesPage = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       <main className="pt-20">
-        {/* Header Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Elykid's Features – Crafted to Make Every Conversation Feel Like Home
+        {/* Hero Section */}
+        <section className="relative py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(249,115,22,0.05)_0%,transparent_50%)]"></div>
+          
+          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-5xl mx-auto">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-pulse-50 border border-pulse-200 mb-8">
+                <span className="text-sm font-medium text-pulse-600">Features Overview</span>
+              </div>
+              
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-gray-900 mb-8 leading-[1.1]">
+                Elykid's Features
+                <br />
+                <span className="bg-gradient-to-r from-pulse-500 to-pulse-600 bg-clip-text text-transparent">
+                  Crafted to Make Every Conversation Feel Like Home
+                </span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Elykid isn't just any AI. It's your personalized companion that grows with you, remembers your needs, and evolves to match your preferences. Let's dive into the features that make Elykid not just smart, but truly your AI.
+              
+              <p className="text-xl sm:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto">
+                Elykid isn't just any AI. It's your personalized companion that grows with you, 
+                remembers your needs, and evolves to match your preferences.
               </p>
             </div>
           </div>
         </section>
 
         {/* Features Grid */}
-        <section className="py-16">
+        <section className="py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 {features.map((feature, index) => (
-                  <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-start mb-6">
-                      <div className="flex-shrink-0 mr-4">
-                        <div className="flex items-center justify-center w-16 h-16 bg-pulse-100 text-pulse-500 rounded-xl">
-                          {feature.icon}
+                  <div 
+                    key={index} 
+                    className="group relative bg-white rounded-3xl border border-gray-100 hover:border-pulse-200 transition-all duration-500 hover:shadow-2xl hover:shadow-pulse-500/10"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-pulse-50/30 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative p-12">
+                      <div className="flex items-start mb-8">
+                        <div className="flex-shrink-0 mr-6">
+                          <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-pulse-100 to-pulse-50 text-pulse-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                            {feature.icon}
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-3xl font-bold text-gray-900 mb-3 group-hover:text-pulse-600 transition-colors duration-300">
+                            {feature.title}
+                          </h3>
+                          <p className="text-xl font-semibold text-pulse-600 mb-6 leading-relaxed">
+                            {feature.description}
+                          </p>
                         </div>
                       </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                        <p className="text-lg font-medium text-pulse-600 mb-4">{feature.description}</p>
-                      </div>
+                      
+                      <p className="text-gray-700 text-lg leading-relaxed">
+                        {feature.details}
+                      </p>
+                      
+                      <div className="absolute bottom-0 left-12 right-12 h-1 bg-gradient-to-r from-pulse-500 to-pulse-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                     </div>
-                    <p className="text-gray-700 leading-relaxed">{feature.details}</p>
                   </div>
                 ))}
               </div>
@@ -101,21 +131,40 @@ const FeaturesPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Ready to Experience These Features?
+        <section className="relative py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(249,115,22,0.1)_0%,transparent_70%)]"></div>
+          
+          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
+                Ready to Experience
+                <br />
+                <span className="bg-gradient-to-r from-pulse-400 to-pulse-500 bg-clip-text text-transparent">
+                  These Features?
+                </span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Curious to see how Elykid can make your conversations feel more personal and tailored just for you? Try it out and experience a new level of AI connection.
+              
+              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+                Curious to see how Elykid can make your conversations feel more personal and 
+                tailored just for you? Try it out and experience a new level of AI connection.
               </p>
-              <a
-                href="#"
-                className="inline-flex items-center px-8 py-4 bg-pulse-500 text-white font-semibold rounded-full hover:bg-pulse-600 transition-colors"
-              >
-                Start Your Journey
-              </a>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <a
+                  href="#"
+                  className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-pulse-500 to-pulse-600 text-white font-semibold text-lg rounded-2xl hover:from-pulse-600 hover:to-pulse-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-pulse-500/25 transform hover:scale-105"
+                >
+                  Start Your Journey
+                </a>
+                
+                <a
+                  href="#"
+                  className="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
         </section>
