@@ -88,7 +88,7 @@ const HumanoidSection = () => {
       className="relative" 
       style={{ height: '300vh' }}
     >
-      <section className="w-full h-screen py-10 md:py-16 sticky top-0 overflow-hidden bg-white" id="why-humanoid">
+      <section className="w-full h-screen py-10 md:py-16 sticky top-0 overflow-hidden bg-white" id="privacy">
         <div className="container px-6 lg:px-8 mx-auto h-full flex flex-col">
           <div className="mb-2 md:mb-3">
             <div className="flex items-center gap-4 mb-2 md:mb-2 pt-8 sm:pt-6 md:pt-4">
@@ -96,17 +96,17 @@ const HumanoidSection = () => {
                 animationDelay: "0.1s"
               }}>
                 <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">02</span>
-                <span>Humanoid</span>
+                <span>Privacy & Features</span>
               </div>
             </div>
             
             <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2">
-              Why Humanoid
+              Your Space, Your Privacy
             </h2>
           </div>
           
           <div ref={cardsContainerRef} className="relative flex-1 perspective-1000">
-            {/* First Card */}
+            {/* First Card - Privacy */}
             <div 
               className={`absolute inset-0 overflow-hidden shadow-xl ${isFirstCardVisible ? 'animate-card-enter' : ''}`} 
               style={{
@@ -128,20 +128,23 @@ const HumanoidSection = () => {
               
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
+                  <span className="text-sm font-medium">Privacy First</span>
                 </div>
               </div>
               
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're giving AI a way to navigate the physical world
+                    Say What You Want. It's Between You and Your AI.
                   </h3>
+                  <p className="text-white/90 text-lg leading-relaxed">
+                    At Elykid, we get how important privacy is. Your conversations are protected with end-to-end encryption. We don't store your data or use it for anything else.
+                  </p>
                 </div>
               </div>
             </div>
             
-            {/* Second Card */}
+            {/* Second Card - Coming Features */}
             <div 
               className={`absolute inset-0 overflow-hidden shadow-xl ${isSecondCardVisible ? 'animate-card-enter' : ''}`} 
               style={{
@@ -164,20 +167,23 @@ const HumanoidSection = () => {
               
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
+                  <span className="text-sm font-medium">Coming Soon</span>
                 </div>
               </div>
               
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're bringing adaptive intelligence to where humans work
+                    We're Not Done Yet. More Features Are Coming.
                   </h3>
+                  <p className="text-white/90 text-base leading-relaxed">
+                    Voice Commands, Gamification, Smarter Thinking, and Group Chats with Multiple AIs. We're always working on making your experience even better.
+                  </p>
                 </div>
               </div>
             </div>
             
-            {/* Third Card */}
+            {/* Third Card - Call to Action */}
             <div 
               className={`absolute inset-0 overflow-hidden shadow-xl ${isThirdCardVisible ? 'animate-card-enter' : ''}`} 
               style={{
@@ -200,15 +206,18 @@ const HumanoidSection = () => {
               
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
+                  <span className="text-sm font-medium">Get Started</span>
                 </div>
               </div>
               
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're creating companions, <span className="text-[#FC4D0A]">not replacements</span>
+                    Let's Talk. Start Your Journey with <span className="text-[#FC4D0A]">Elykid</span> Today.
                   </h3>
+                  <p className="text-white/90 text-lg leading-relaxed mb-6">
+                    Your AI is already tuned into your vibe. All that's left is for you to say hey.
+                  </p>
                 </div>
               </div>
             </div>
