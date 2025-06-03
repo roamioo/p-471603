@@ -54,40 +54,43 @@ const Navbar = () => {
       <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link 
           to="/" 
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-3"
           onClick={scrollToTop}
           aria-label="Elykid"
         >
           <img 
-            src="/logo.svg" 
+            src="/lovable-uploads/c9336716-383a-44c6-a6cb-1717fce834b5.png" 
             alt="Elykid Logo" 
-            className="h-7 sm:h-8" 
+            className="h-8 sm:h-10 w-8 sm:w-10" 
           />
+          <span className="text-xl sm:text-2xl font-lufga font-bold text-black">
+            Elykid
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           <Link 
             to="/" 
-            className={cn("nav-link", location.pathname === "/" && "text-pulse-500")}
+            className={cn("nav-link", location.pathname === "/" && "text-primary")}
           >
             Home
           </Link>
           <Link 
             to="/features" 
-            className={cn("nav-link", location.pathname === "/features" && "text-pulse-500")}
+            className={cn("nav-link", location.pathname === "/features" && "text-primary")}
           >
             Features
           </Link>
           <Link 
             to="/how-to-use" 
-            className={cn("nav-link", location.pathname === "/how-to-use" && "text-pulse-500")}
+            className={cn("nav-link", location.pathname === "/how-to-use" && "text-primary")}
           >
             How to Use
           </Link>
           <Link 
             to="/pricing" 
-            className={cn("nav-link", location.pathname === "/pricing" && "text-pulse-500")}
+            className={cn("nav-link", location.pathname === "/pricing" && "text-primary")}
           >
             Pricing
           </Link>
@@ -113,7 +116,7 @@ const Navbar = () => {
             to="/" 
             className={cn(
               "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
-              location.pathname === "/" && "text-pulse-500 bg-pulse-50"
+              location.pathname === "/" && "text-primary bg-primary/10"
             )}
             onClick={closeMenu}
           >
@@ -123,7 +126,7 @@ const Navbar = () => {
             to="/features" 
             className={cn(
               "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
-              location.pathname === "/features" && "text-pulse-500 bg-pulse-50"
+              location.pathname === "/features" && "text-primary bg-primary/10"
             )}
             onClick={closeMenu}
           >
@@ -133,7 +136,7 @@ const Navbar = () => {
             to="/how-to-use" 
             className={cn(
               "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
-              location.pathname === "/how-to-use" && "text-pulse-500 bg-pulse-50"
+              location.pathname === "/how-to-use" && "text-primary bg-primary/10"
             )}
             onClick={closeMenu}
           >
@@ -143,7 +146,7 @@ const Navbar = () => {
             to="/pricing" 
             className={cn(
               "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
-              location.pathname === "/pricing" && "text-pulse-500 bg-pulse-50"
+              location.pathname === "/pricing" && "text-primary bg-primary/10"
             )}
             onClick={closeMenu}
           >

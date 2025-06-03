@@ -26,12 +26,12 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#00E155',
+					foreground: '#ffffff'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: '#000000',
+					foreground: '#ffffff'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -63,25 +63,25 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Pulse Robot
+				// Updated color scheme for Elykid
 				pulse: {
-					"50": "#fff7ed",
-					"100": "#ffedd5",
-					"200": "#fed7aa",
-					"300": "#fdba74",
-					"400": "#fb923c",
-					"500": "#f97316", // Primary orange
-					"600": "#ea580c",
-					"700": "#c2410c",
-					"800": "#9a3412",
-					"900": "#7c2d12",
-					"950": "#431407",
+					"50": "#e6ffed",
+					"100": "#b3ffcc",
+					"200": "#80ffaa",
+					"300": "#4dff88",
+					"400": "#1aff66",
+					"500": "#00E155", // Primary green
+					"600": "#00b844",
+					"700": "#008f33",
+					"800": "#006622",
+					"900": "#003d11",
+					"950": "#001a08",
 				},
 				dark: {
-					"900": "#121212", // Almost black
-					"800": "#1e1e1e",
-					"700": "#2d2d2d",
-					"600": "#3d3d3d",
+					"900": "#000000", // Pure black
+					"800": "#1a1a1a",
+					"700": "#333333",
+					"600": "#4d4d4d",
 				},
 			},
 			borderRadius: {
@@ -137,13 +137,14 @@ export default {
 				'float': 'float 6s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'hero-gradient': 'linear-gradient(90deg, hsla(24, 100%, 83%, 1) 0%, hsla(341, 91%, 68%, 1) 100%)',
-				'hero-gradient-2': 'linear-gradient(90deg, hsla(39, 100%, 77%, 1) 0%, hsla(22, 90%, 57%, 1) 100%)',
-				'pulse-gradient': 'linear-gradient(180deg, rgba(249,115,22,0.8) 0%, rgba(249,115,22,0) 100%)',
+				'hero-gradient': 'linear-gradient(90deg, #00E155 0%, #00b844 100%)',
+				'hero-gradient-2': 'linear-gradient(90deg, #1aff66 0%, #00E155 100%)',
+				'pulse-gradient': 'linear-gradient(180deg, rgba(0,225,85,0.8) 0%, rgba(0,225,85,0) 100%)',
 			},
 			fontFamily: {
-				'sans': ['Inter', 'sans-serif'],
-				'display': ['Brockmann', 'SF Pro Display', 'Inter', 'sans-serif'],
+				'sans': ['Lufga', 'Inter', 'sans-serif'],
+				'display': ['Lufga', 'Brockmann', 'SF Pro Display', 'Inter', 'sans-serif'],
+				'lufga': ['Lufga', 'sans-serif'],
 				'brockmann': ['Brockmann', 'serif'],
 				'playfair': ['"Playfair Display"', 'serif'],
 			},

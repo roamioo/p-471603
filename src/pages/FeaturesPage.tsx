@@ -63,23 +63,23 @@ const FeaturesPage = () => {
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(249,115,22,0.05)_0%,transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,225,85,0.05)_0%,transparent_50%)]"></div>
           
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-5xl mx-auto">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-pulse-50 border border-pulse-200 mb-8">
-                <span className="text-sm font-medium text-pulse-600">Features Overview</span>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+                <span className="text-sm font-medium text-primary font-lufga">Features Overview</span>
               </div>
               
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-gray-900 mb-8 leading-[1.1]">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-lufga font-bold text-black mb-8 leading-[1.1]">
                 Elykid's Features
                 <br />
-                <span className="bg-gradient-to-r from-pulse-500 to-pulse-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                   Crafted to Make Every Conversation Feel Like Home
                 </span>
               </h1>
               
-              <p className="text-xl sm:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-xl sm:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto font-lufga">
                 Elykid isn't just any AI. It's your personalized companion that grows with you, 
                 remembers your needs, and evolves to match your preferences.
               </p>
@@ -95,33 +95,33 @@ const FeaturesPage = () => {
                 {features.map((feature, index) => (
                   <div 
                     key={index} 
-                    className="group relative bg-white rounded-3xl border border-gray-100 hover:border-pulse-200 transition-all duration-500 hover:shadow-2xl hover:shadow-pulse-500/10"
+                    className="group relative bg-white rounded-3xl border border-gray-100 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-pulse-50/30 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
                     <div className="relative p-12">
                       <div className="flex items-start mb-8">
                         <div className="flex-shrink-0 mr-6">
-                          <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-pulse-100 to-pulse-50 text-pulse-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                          <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 text-primary rounded-2xl group-hover:scale-110 transition-transform duration-300">
                             {feature.icon}
                           </div>
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-3xl font-bold text-gray-900 mb-3 group-hover:text-pulse-600 transition-colors duration-300">
+                          <h3 className="text-3xl font-bold text-black mb-3 group-hover:text-primary transition-colors duration-300 font-lufga">
                             {feature.title}
                           </h3>
-                          <p className="text-xl font-semibold text-pulse-600 mb-6 leading-relaxed">
+                          <p className="text-xl font-semibold text-primary mb-6 leading-relaxed font-lufga">
                             {feature.description}
                           </p>
                         </div>
                       </div>
                       
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-lg leading-relaxed font-lufga">
                         {feature.details}
                       </p>
                       
-                      <div className="absolute bottom-0 left-12 right-12 h-1 bg-gradient-to-r from-pulse-500 to-pulse-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                      <div className="absolute bottom-0 left-12 right-12 h-1 bg-gradient-to-r from-primary to-primary/80 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                     </div>
                   </div>
                 ))}
@@ -132,20 +132,20 @@ const FeaturesPage = () => {
 
         {/* CTA Section */}
         <section className="relative py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(249,115,22,0.1)_0%,transparent_70%)]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,225,85,0.1)_0%,transparent_70%)]"></div>
           
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight font-lufga">
                 Ready to Experience
                 <br />
-                <span className="bg-gradient-to-r from-pulse-400 to-pulse-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                   These Features?
                 </span>
               </h2>
               
-              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto font-lufga">
                 Curious to see how Elykid can make your conversations feel more personal and 
                 tailored just for you? Try it out and experience a new level of AI connection.
               </p>
@@ -153,14 +153,14 @@ const FeaturesPage = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
                   href="#"
-                  className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-pulse-500 to-pulse-600 text-white font-semibold text-lg rounded-2xl hover:from-pulse-600 hover:to-pulse-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-pulse-500/25 transform hover:scale-105"
+                  className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-primary to-primary/90 text-white font-semibold text-lg rounded-2xl hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/25 transform hover:scale-105 font-lufga"
                 >
                   Start Your Journey
                 </a>
                 
                 <a
                   href="#"
-                  className="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 font-lufga"
                 >
                   Learn More
                 </a>
