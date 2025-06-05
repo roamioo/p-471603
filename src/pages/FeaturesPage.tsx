@@ -154,29 +154,47 @@ const FeaturesPage = () => {
                 </p>
               </div>
 
-              {/* Mobile Screenshots Placeholder */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                {[1, 2, 3].map((index) => (
-                  <div key={index} className="group relative">
-                    <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-8 h-96 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <div className="text-center">
-                        <Smartphone className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                        <p className="text-gray-500 font-medium">
-                          Mobile Screenshot {index}
-                        </p>
-                        <p className="text-sm text-gray-400 mt-2">
-                          Coming Soon
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* Mobile Screenshots */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <div className="group relative">
+                  <div className="bg-white rounded-3xl p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/eafad300-9763-4652-8f21-9cf661c2b120.png" 
+                      alt="Elykid Chat Interface - Conversational AI with memory" 
+                      className="w-full h-auto object-cover rounded-2xl"
+                    />
                   </div>
-                ))}
+                  
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <div className="group relative">
+                  <div className="bg-white rounded-3xl p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/1d6fb534-7f43-4e3f-9f65-78575338cbe4.png" 
+                      alt="Elykid AI Customization - Personalize your AI companion" 
+                      className="w-full h-auto object-cover rounded-2xl"
+                    />
+                  </div>
+                  
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <div className="group relative">
+                  <div className="bg-white rounded-3xl p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/21ad10d0-e1eb-4584-9c61-6509834e2f5a.png" 
+                      alt="Elykid Profile Setup - Personalized AI experience" 
+                      className="w-full h-auto object-cover rounded-2xl"
+                    />
+                  </div>
+                  
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
               </div>
 
               {/* Mobile Features */}
-              <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   { title: "Offline Access", desc: "Continue conversations even without internet" },
                   { title: "Push Notifications", desc: "Stay connected with smart reminders" },
