@@ -3,7 +3,7 @@ import React from "react";
 
 const ImageShowcaseSection = () => {
   return (
-    <section className="w-full pt-0 pb-8 sm:pb-12 bg-white" id="showcase">
+    <section className="w-full pt-16 pb-8 sm:pb-12 bg-white" id="showcase">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 animate-on-scroll">
           <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-gray-900 mb-3 sm:mb-4">
@@ -18,7 +18,7 @@ const ImageShowcaseSection = () => {
         <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant mx-auto max-w-4xl animate-on-scroll">
           <div className="w-full">
             <img 
-              src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png" 
+              src="/lovable-uploads/c9336716-383a-44c6-a6cb-1717fce834b5.png" 
               alt="Elykid AI Companion - Your personal intelligent assistant" 
               className="w-full h-auto object-cover"
             />

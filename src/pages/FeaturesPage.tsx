@@ -2,7 +2,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Brain, Settings, TrendingUp, Database, Shield, Music, MessageSquare, User } from "lucide-react";
+import { Brain, Settings, TrendingUp, Database, Shield, Music, MessageSquare, User, Smartphone } from "lucide-react";
 
 const FeaturesPage = () => {
   const features = [
@@ -123,6 +123,69 @@ const FeaturesPage = () => {
                       
                       <div className="absolute bottom-0 left-12 right-12 h-1 bg-gradient-to-r from-primary to-primary/80 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mobile App Preview Section */}
+        <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-20">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+                  <Smartphone className="w-4 h-4 mr-2 text-primary" />
+                  <span className="text-sm font-medium text-primary font-lufga">Mobile Experience</span>
+                </div>
+                
+                <h2 className="text-4xl sm:text-5xl font-bold text-black mb-8 leading-tight font-lufga">
+                  Elykid on the Go
+                  <br />
+                  <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                    Your AI Companion Everywhere
+                  </span>
+                </h2>
+                
+                <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto font-lufga">
+                  Take your personalized AI companion with you wherever you go. 
+                  The mobile app brings all of Elykid's features to your fingertips.
+                </p>
+              </div>
+
+              {/* Mobile Screenshots Placeholder */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                {[1, 2, 3].map((index) => (
+                  <div key={index} className="group relative">
+                    <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-8 h-96 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <div className="text-center">
+                        <Smartphone className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                        <p className="text-gray-500 font-medium">
+                          Mobile Screenshot {index}
+                        </p>
+                        <p className="text-sm text-gray-400 mt-2">
+                          Coming Soon
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile Features */}
+              <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {[
+                  { title: "Offline Access", desc: "Continue conversations even without internet" },
+                  { title: "Push Notifications", desc: "Stay connected with smart reminders" },
+                  { title: "Voice Commands", desc: "Talk to Elykid hands-free" },
+                  { title: "Dark Mode", desc: "Easy on the eyes, day or night" }
+                ].map((item, index) => (
+                  <div key={index} className="text-center p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 className="text-lg font-semibold text-black mb-3 font-lufga">{item.title}</h3>
+                    <p className="text-gray-600 text-sm font-lufga">{item.desc}</p>
                   </div>
                 ))}
               </div>
