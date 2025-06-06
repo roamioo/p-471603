@@ -2,254 +2,286 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Brain, Settings, TrendingUp, Database, Shield, Music, MessageSquare, User, Smartphone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const FeaturesPage = () => {
-  const features = [
+  const mainFeatures = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI Memory",
-      description: "Your Companion Who Never Forgets",
-      details: "Elykid doesn't just talk to you; it remembers you. It keeps track of your past conversations, your priorities, and the little details that matter to you. With long-term memory, every chat feels like it's picking up right where the last one left off. Your AI is constantly learning, evolving with your preferences and needs, ensuring it's always in tune with who you are."
+      title: "Smart everything",
+      description: "Elykid learns from your interactions, adapting its responses to match your preferences and providing personalized assistance.",
+      icon: (
+        <div className="w-6 h-6 bg-primary rounded-md flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 1 1-4-4"></path>
+            <path d="M12 8a4 4 0 1 0 4 4"></path>
+            <circle cx="12" cy="12" r="1"></circle>
+          </svg>
+        </div>
+      )
     },
     {
-      icon: <Settings className="w-8 h-8" />,
-      title: "Endless Customization",
-      description: "Make It Yours",
-      details: "Your AI should feel like it was built for you, and with Elykid, it absolutely is. From personality and tone to appearance, you can shape your AI exactly how you want it. Whether you prefer a laid-back conversation or something more formal, your AI adapts to suit your style. And as you evolve, your AI does too, keeping up with your changing mood, interests, and needs."
+      title: "Seamless Everyday",
+      description: "Integrate Elykid effortlessly into your daily routine with features designed to enhance your productivity and lifestyle.",
+      icon: (
+        <div className="w-6 h-6 bg-primary rounded-md flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <path d="M9 13v-1h6v1"></path>
+          </svg>
+        </div>
+      )
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Personalized Growth",
-      description: "Your AI Grows With You",
-      details: "Elykid learns from every interaction, getting to know your preferences, style, and personality better with each conversation. It's like having a companion who grows smarter and more insightful over time. Whether you're seeking advice, suggestions, or just someone to chat with, it's always tailored to you. The more you engage with Elykid, the more it becomes your personal guide."
+      title: "Intense Customization",
+      description: "Tailor Elykid to your specific needs with extensive customization options for appearance, behavior, and responses.",
+      icon: (
+        <div className="w-6 h-6 bg-primary rounded-md flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 8v8"></path>
+            <path d="M8 12h8"></path>
+          </svg>
+        </div>
+      )
     },
     {
-      icon: <Database className="w-8 h-8" />,
-      title: "Smart Information Access",
-      description: "Knowledge at Your Fingertips",
-      details: "Elykid is your ultimate source of information. Whether you're looking for quick answers or in-depth insights, it's always ready to help. Your AI taps into a vast library of expert knowledge and articles, and can even search the web in real-time for the latest information. Plus, it's aware of time, adjusting its responses based on when you're chatting."
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8" />,
       title: "Conversation Archives",
-      description: "Your Personal Diary",
-      details: "Never lose track of a meaningful moment. With Elykid, your conversation archives are always available. Revisit past chats to reflect, remember key insights, or simply relive important conversations. It's like a digital diary that grows alongside you, ensuring every important moment is captured and available when you need it most."
+      description: "Never lose track of important discussions with complete archives of all your conversations with Elykid.",
+      icon: (
+        <div className="w-6 h-6 bg-primary rounded-md flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+      )
     },
     {
-      icon: <User className="w-8 h-8" />,
-      title: "Avatars, Likes & Dislikes",
-      description: "Make It Personal",
-      details: "Elykid isn't just smart, it's intuitive. You can personalize your AI's appearance and preferences to reflect your own personality. From its language to its responses, Elykid adapts based on what it learns about your likes and dislikes, ensuring every conversation feels like a unique experience. Make your AI truly yours."
+      title: "Security",
+      description: "Your data is protected with advanced encryption and privacy features to ensure your conversations remain confidential.",
+      icon: (
+        <div className="w-6 h-6 bg-primary rounded-md flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+          </svg>
+        </div>
+      )
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Security and Privacy",
-      description: "Trust That Stays With You",
-      details: "Your privacy is the top priority. Elykid uses advanced security to protect your chats with end-to-end encryption. No data is stored; everything you share stays between you and your AI. With Elykid, trust is built into every conversation, making it a safe space for all your thoughts and questions."
+      title: "Calming music",
+      description: "Enhance your mood with Elykid's curated selection of calming music perfect for relaxation, focus, or meditation.",
+      icon: (
+        <div className="w-6 h-6 bg-primary rounded-md flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+        </div>
+      )
     },
-    {
-      icon: <Music className="w-8 h-8" />,
-      title: "Calming Music",
-      description: "The Perfect Vibe for Any Moment",
-      details: "Sometimes, a little music is all you need. Elykid can recommend and play calming tunes to help set the right mood or boost your focus. Whether you're unwinding after a long day or need to concentrate on a task, Elykid has you covered. It's your personal soundtrack, enhancing every moment of your day."
-    }
+  ];
+
+  const customizationOptions = [
+    "Appearance", 
+    "Avatar", 
+    "Voice & Dialect"
+  ];
+
+  const aiMemoryTypes = [
+    "Long Term Memory",
+    "Recent Memory",
+    "Short Term Memory"
+  ];
+
+  const informationFeatures = [
+    "Knowledge Base",
+    "Internet Search",
+    "Time Awareness"
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       <Navbar />
-      <main className="pt-20">
+      
+      <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,225,85,0.05)_0%,transparent_50%)]"></div>
-          
-          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-5xl mx-auto">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-                <span className="text-sm font-medium text-primary font-lufga">Features Overview</span>
-              </div>
-              
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-lufga font-bold text-black mb-8 leading-[1.1]">
-                Elykid's Features
-                <br />
-                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                  Crafted to Make Every Conversation Feel Like Home
-                </span>
+        <section className="container mx-auto px-4 py-16 md:py-24">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
+            <div className="lg:w-1/2">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Main features<br />
+                of Elykid
               </h1>
-              
-              <p className="text-xl sm:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto font-lufga">
-                Elykid isn't just any AI. It's your personalized companion that grows with you, 
-                remembers your needs, and evolves to match your preferences.
+              <p className="text-gray-600 mb-8 max-w-lg">
+                From smart AI memory to total customization options, Elykid has it all. From its smart AI, you'll love what Elykid can do.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Grid */}
-        <section className="py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                {features.map((feature, index) => (
-                  <div 
-                    key={index} 
-                    className="group relative bg-white rounded-3xl border border-gray-100 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    <div className="relative p-12">
-                      <div className="flex items-start mb-8">
-                        <div className="flex-shrink-0 mr-6">
-                          <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 text-primary rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            {feature.icon}
-                          </div>
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-3xl font-bold text-black mb-3 group-hover:text-primary transition-colors duration-300 font-lufga">
-                            {feature.title}
-                          </h3>
-                          <p className="text-xl font-semibold text-primary mb-6 leading-relaxed font-lufga">
-                            {feature.description}
-                          </p>
-                        </div>
-                      </div>
-                      
-                      <p className="text-gray-700 text-lg leading-relaxed font-lufga">
-                        {feature.details}
-                      </p>
-                      
-                      <div className="absolute bottom-0 left-12 right-12 h-1 bg-gradient-to-r from-primary to-primary/80 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                    </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                {mainFeatures.map((feature, index) => (
+                  <div key={index} className="mb-10">
+                    {feature.icon}
+                    <h3 className="text-lg font-semibold mt-4 mb-2">{feature.title}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">{feature.description}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+            
+            <div className="lg:w-1/2 flex justify-center">
+              <div className="relative">
+                <div className="bg-black rounded-3xl overflow-hidden w-64 h-[500px] shadow-xl">
+                  <div className="p-5 text-white">
+                    <p className="text-center">It's smart!</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Mobile App Preview Section */}
-        <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-20">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-                  <Smartphone className="w-4 h-4 mr-2 text-primary" />
-                  <span className="text-sm font-medium text-primary font-lufga">Mobile Experience</span>
+        {/* Customization Section */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2">
+              <div className="bg-gradient-to-br from-pink-200 via-purple-200 to-indigo-200 p-8 rounded-3xl shadow-lg">
+                <div className="bg-white rounded-xl p-4 shadow">
+                  <div className="h-48 flex items-center justify-center">
+                    <p className="text-gray-400 text-sm">Customization interface placeholder</p>
+                  </div>
                 </div>
-                
-                <h2 className="text-4xl sm:text-5xl font-bold text-black mb-8 leading-tight font-lufga">
-                  Elykid on the Go
-                  <br />
-                  <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                    Your AI Companion Everywhere
-                  </span>
-                </h2>
-                
-                <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto font-lufga">
-                  Take your personalized AI companion with you wherever you go. 
-                  The mobile app brings all of Elykid's features to your fingertips.
+              </div>
+            </div>
+            
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Customization<br/>your AI</h2>
+              <ul className="space-y-4 mb-8">
+                {customizationOptions.map((option, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-4 h-4 rounded-full bg-primary"></div>
+                    <span>{option}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        {/* AI Memory Section */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">AI Memory</h2>
+              <ul className="space-y-4 mb-8">
+                {aiMemoryTypes.map((type, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-4 h-4 rounded-full bg-primary"></div>
+                    <span>{type}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="lg:w-1/2">
+              <div className="bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 p-8 rounded-3xl shadow-lg">
+                <div className="bg-white rounded-xl p-4 shadow">
+                  <div className="h-48 flex items-center justify-center">
+                    <p className="text-gray-400 text-sm">AI Memory interface placeholder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Information Section */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2">
+              <div className="bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 p-8 rounded-3xl shadow-lg">
+                <div className="bg-white rounded-xl p-4 shadow">
+                  <div className="h-48 flex items-center justify-center">
+                    <p className="text-gray-400 text-sm">Information interface placeholder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Informatica</h2>
+              <ul className="space-y-4 mb-8">
+                {informationFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-4 h-4 rounded-full bg-primary"></div>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        {/* Made For You Section */}
+        <section className="container mx-auto px-4 py-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            AI specifically made for you.
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="col-span-1 lg:col-span-3">
+              <div className="bg-black rounded-xl p-6 flex items-center justify-center h-72">
+                <p className="text-white">Combination of social AI placeholder image</p>
+              </div>
+            </div>
+            
+            <div className="col-span-1">
+              <div className="bg-black rounded-xl p-6 flex items-center justify-center h-56">
+                <p className="text-white">AI Memory placeholder image</p>
+              </div>
+            </div>
+            
+            <div className="col-span-1 lg:col-span-2">
+              <div className="bg-black rounded-xl p-6 h-56">
+                <h3 className="text-white text-xl font-semibold mb-4">Long Term Memory</h3>
+                <p className="text-gray-400">
+                  Elykid remembers your conversations, preferences, and important details to provide
+                  increasingly personalized assistance over time.
                 </p>
-              </div>
-
-              {/* Mobile Screenshots */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-                <div className="group relative">
-                  <div className="bg-white rounded-3xl p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    <img 
-                      src="/lovable-uploads/eafad300-9763-4652-8f21-9cf661c2b120.png" 
-                      alt="Elykid Chat Interface - Conversational AI with memory" 
-                      className="w-full h-auto object-cover rounded-2xl"
-                    />
+                <div className="flex gap-4 mt-6">
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                    <span className="text-black">1</span>
                   </div>
-                  
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                    <span className="text-black">2</span>
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                    <span className="text-black">3</span>
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                    <span className="text-black">4</span>
+                  </div>
                 </div>
-
-                <div className="group relative">
-                  <div className="bg-white rounded-3xl p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    <img 
-                      src="/lovable-uploads/1d6fb534-7f43-4e3f-9f65-78575338cbe4.png" 
-                      alt="Elykid AI Customization - Personalize your AI companion" 
-                      className="w-full h-auto object-cover rounded-2xl"
-                    />
-                  </div>
-                  
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-
-                <div className="group relative">
-                  <div className="bg-white rounded-3xl p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    <img 
-                      src="/lovable-uploads/21ad10d0-e1eb-4584-9c61-6509834e2f5a.png" 
-                      alt="Elykid Profile Setup - Personalized AI experience" 
-                      className="w-full h-auto object-cover rounded-2xl"
-                    />
-                  </div>
-                  
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </div>
-
-              {/* Mobile Features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {[
-                  { title: "Offline Access", desc: "Continue conversations even without internet" },
-                  { title: "Push Notifications", desc: "Stay connected with smart reminders" },
-                  { title: "Voice Commands", desc: "Talk to Elykid hands-free" },
-                  { title: "Dark Mode", desc: "Easy on the eyes, day or night" }
-                ].map((item, index) => (
-                  <div key={index} className="text-center p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 className="text-lg font-semibold text-black mb-3 font-lufga">{item.title}</h3>
-                    <p className="text-gray-600 text-sm font-lufga">{item.desc}</p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,225,85,0.1)_0%,transparent_70%)]"></div>
-          
-          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight font-lufga">
-                Ready to Experience
-                <br />
-                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                  These Features?
-                </span>
-              </h2>
-              
-              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto font-lufga">
-                Curious to see how Elykid can make your conversations feel more personal and 
-                tailored just for you? Try it out and experience a new level of AI connection.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="#"
-                  className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-primary to-primary/90 text-white font-semibold text-lg rounded-2xl hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/25 transform hover:scale-105 font-lufga"
-                >
-                  Start Your Journey
-                </a>
-                
-                <a
-                  href="#"
-                  className="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 font-lufga"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
+        <section className="container mx-auto px-4 py-20 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Be part of the future<br />
+            of personal AI
+          </h2>
+          <p className="text-gray-600 max-w-xl mx-auto mb-8">
+            Unlock the full potential of personal AI assistance with Elykid - your personal AI
+            companion, crafted just for you.
+          </p>
+          <Button className="bg-primary hover:bg-primary/90 rounded-full px-8 py-6 text-lg font-medium">
+            Get Started
+          </Button>
         </section>
       </main>
+
       <Footer />
     </div>
   );
