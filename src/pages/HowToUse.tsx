@@ -184,8 +184,8 @@ const HowToUse = () => {
                     </div>
                     
                     <StepImage 
-                      imageSrc="/placeholder.svg" 
-                      alt="Sign up screenshot" 
+                      imageSrc="/lovable-uploads/dd58868c-7f23-4428-8e9c-c2f1675a89aa.png" 
+                      alt="Creating your profile" 
                     />
                     
                     <p className="text-sm text-gray-600 leading-relaxed mb-6">
@@ -201,7 +201,7 @@ const HowToUse = () => {
                     </div>
                     
                     <StepImage 
-                      imageSrc="/placeholder.svg" 
+                      imageSrc="/lovable-uploads/2df6796f-c58e-45d8-bc24-a7ba374952c9.png" 
                       alt="Create profile screenshot" 
                     />
                     
@@ -218,7 +218,7 @@ const HowToUse = () => {
                     </div>
                     
                     <StepImage 
-                      imageSrc="/placeholder.svg" 
+                      imageSrc="/lovable-uploads/573b2ead-971b-4103-be8b-1eb2b6e9232e.png" 
                       alt="Get advice screenshot" 
                     />
                     
@@ -235,7 +235,7 @@ const HowToUse = () => {
                     </div>
                     
                     <StepImage 
-                      imageSrc="/placeholder.svg" 
+                      imageSrc="/lovable-uploads/c17ac3d5-3983-4577-aae3-664c79feb1df.png" 
                       alt="Explore screenshot" 
                     />
                     
